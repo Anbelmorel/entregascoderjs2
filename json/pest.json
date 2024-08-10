@@ -1,0 +1,7 @@
+ [
+    { "nombre" : "lifting", "precio": 5000 , "imag":"../imag/lifting.png", "descripcion":" Este tratamiento realza y curva tus pestañas naturales, creando un efecto de mayor longitud y volumen sin necesidad de extensiones"},
+    { "nombre":"clasicas", "precio": 10000 ," imag": "../imag/clasicas.png" , "descripcion":" Aplicación de una extensión por cada pestaña natural, ideal para un look natural y elegante"},
+    { "nombre":"volumen medio", "precio": 12000 ,"imag":  "../imag/voluumedio.png" , "descripcion":"Extensiones de pestañas más densas, donde se aplican varias extensiones por pestaña natural, creando un look más lleno y dramático"},
+    { "nombre":"volumen ruso", "precio": 14000 ,"imag" : "../imag/volumenruso.jpg" , "descripcion":" Técnica avanzada donde se aplican abanicos de 2-6 extensiones finas por pestaña natural, resultando en un look voluminoso pero suave"},
+    { "nombre":"efecto cat eyes"," precio": 14000 ,"imag": "../imag/efectcatayes.png" , "descripcion":" Extensiones de pestañas que se alargan gradualmente hacia las esquinas exteriores, creando un efecto de ojo rasgado y felino."}
+  ]

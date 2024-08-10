@@ -1,0 +1,9 @@
+
+[
+    {"nombre":"limpieza de cutis"  , "precio": 6600 , "img":"../imag/"},
+    {"nombre":"peeling mecanico con punta diamante" , "precio":10200  , "img":"../imag/"},
+    {"nombre":"peeling quimico" , "precio":7800  , "img":"../imag/"},
+    {"nombre":"luminoterapia + limpieza facial" , "precio": 7000  , "img": "../imag/" },
+    {"nombre":"limpieza frofunda con cauterizacion" , "precio": 12300  , "img":"../imag/" }
+
+]

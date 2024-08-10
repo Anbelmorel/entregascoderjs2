@@ -1,0 +1,360 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: #7a6fb5; /* violeta medio */
+  padding: 20px;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #ffffff; /* blanco */
+  text-decoration: none;
+}
+/*main*/
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.contenedor-tarjetas{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+.tarjeta1 {
+  background-color: #c7b8ea; 
+  padding: 20px;
+  margin: 20px;
+  height: 500px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta1 h3 {
+  color: #6c5ce7; /* violeta oscuro */
+  margin-top: 0;
+  text-align: center;
+}
+
+.tarjeta1 p {
+  color: #272144; /* violeta medio */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tarjeta1:hover {
+  background-color: #a88bdb; /* violeta claro hover */
+}
+.tarjeta1 img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  
+}
+.tarjeta1 button {
+  background-color: #7a6fb5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 70px;
+}
+/*tarjeta2*/
+.contarjetas{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+.tarjeta2 {
+  background-color: #c7b8ea; 
+  padding: 20px;
+  margin: 20px;
+  height: 200px;
+  width: 250px;
+  align-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tarjeta2 h3 {
+  color: #6c5ce7; /* violeta oscuro */
+  margin-top: 0;
+  text-align: center;
+}
+
+.tarjeta2 p {
+  color: #272144; /* violeta medio */
+  margin-bottom: 20px;
+  text-align: center;
+}
+.tarjeta2 button {
+  background-color: #7a6fb5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.tarjeta2:hover {
+  background-color: #a88bdb; /* violeta claro hover */
+}
+/*subtitulo y titulo*/
+
+h2 , h1 {
+  font-size: 30px;
+  color: #6c5ce7;
+  text-align: center;
+  margin: 20px;
+}
+/*formulario*/
+#formulario-turno {
+  background-color: #c7b8ea;
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 30px ;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0);
+  opacity: 0;
+  animation: aparecer 0.5s forwards;
+}
+
+#formulario-turno label {
+  color: #6c5ce7;
+  font-size: 20px;
+}
+
+#formulario-turno input[type="date"],
+#formulario-turno input[type="time"] {
+  width: 80%;
+  height: 40px;
+
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#formulario-turno button[type="submit"] {
+  background-color: #7a6fb5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes aparecer {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*pago*/
+.tarjeta-pago {
+  background-color: #c7b8ea;
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 200px;
+  
+}
+
+.tarjeta-pago input[type="radio"] {
+  margin-right: 10px;
+}
+
+.tarjeta-pago label {
+  color: #6c5ce7;
+}
+
+#finalizar {
+  background-color: #7a6fb5;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#finalizar:hover {
+  background-color: #6c5ce7;
+}
+.tarjeta-pago {
+  background-color: #c7b8ea;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+/*animacion*/
+.tarjeta-pago:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-pago input[type="radio"] {
+  margin-right: 10px;
+}
+
+.tarjeta-pago label {
+  color: #6c5ce7;
+}
+
+#finalizar {
+  background-color: #7a6fb5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#finalizar:hover {
+  background-color: #6c5ce7;
+}
+/*finalizar*/
+.contenedor-factura {
+  background-color: #c7b8ea;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 40px auto;
+}
+
+.contenedor-factura h2 {
+  color: #6c5ce7;
+  margin-bottom: 20px;
+}
+
+.contenedor-factura ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contenedor-factura li {
+  margin-bottom: 10px;
+}
+
+.contenedor-factura p {
+  margin-bottom: 20px;
+}
+
+.contenedor-factura .total {
+  font-weight: bold;
+  font-size: 18px;
+  color: #6c5ce7;
+}
+/*tarjetas estaticas en el index*/
+.contenedor-tarjetas3 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.tarjeta {
+  background-color: #c7b8ea;
+  padding: 10px;
+  margin: 5px;
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.tarjeta h2 {
+  color: #6c5ce7;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  font-size: 12px;
+  color: #4c3c55;
+  text-align: center;
+}
+
+/*footer*/
+footer {
+  background-color: #6c5ce7; /* violeta oscuro */
+  padding: 20px;
+  text-align: center;
+  color: #ffffff; /* blanco */
+}
+
+footer .contFooter {
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer .contFooter img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+footer p {
+  margin-top: 0;
+}

@@ -1,0 +1,23 @@
+[
+    
+{ "nombre": "semipermanente",
+ "precio": "5000" ,
+  "img": "../imag/semipermanente.png",
+"descripcion": "Esmalte que dura más que el tradicional, proporcionando un acabado brillante y resistente por hasta dos semanas sin descascararse"},
+
+{ "nombre":"capping", 
+"precio": "7000",
+"img" : "../imag/capping.png", 
+"descripcion":"Técnica que consiste en reforzar las uñas naturales con una capa de gel o acrílico, sin añadir longitud, ideal para fortalecer y proteger las uñas"},
+
+{ "nombre": "esculpidas",
+"precio": "14000" ,
+"img":"../imag/esculpida.png",
+"descripcion": "Extensión de uñas que se moldea y construye directamente sobre la uña natural utilizando gel o acrílico, permitiendo personalizar la forma y longitud según la preferencia del cliente"},
+
+{ "nombre":"sof gel",
+ "precio": "14000",
+ "img": "../imag/sof,png",
+"descripcion": "Uñas artificiales flexibles y ligeras que se aplican sobre las uñas naturales, proporcionando un look natural con la opción de personalización en color y diseño."}
+
+]

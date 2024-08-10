@@ -1,0 +1,8 @@
+
+  [
+    {"nombre":"axila pierna entera "  , "precio": 5000 , "categoria": "promos"  ,  "img": "../imag/"},
+    {"nombre":"bozo + axila"  , "precio":5000  , "categoria": "promos"  ,  "img": "../imag/"},
+    {"nombre":"cuerpo entero"  , "precio": 10000 ,  "imgdepi": "../imag/"},
+    {"nombre":"pierna entera + cavado"  , "precio":7000  , "categoria":"promos"  ,  "img": "../imag/"},
+    {"nombre":"rostro"  , "precio": 3500 ,  "img": "../imag/"}
+  ]
