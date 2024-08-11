@@ -26,8 +26,6 @@ let links = [
   }
   header.appendChild(menu);
   //main
-  let titulo = document.createElement("h1");
-  let parrafo = document.createElement("p");
   let servi = [
     {nombre:"Manicuria", img:"imag/manucuria.png",descripcion: "Las extensiones de manicura permiten lucir uñas largas y elegantes sin necesidad de esperar a que crezcan naturalmente. Ofrecemos varios tipos de extensiones, como uñas de gel, acrílicas y esculpidas, adaptadas a tus necesidades y preferencias. El resultado es un acabado impecable y duradero, ideal para cualquier ocasión."},
     {nombre:"Extenciones de pestañas", img:"imag/pestanas.png",descripcion: "Las extensiones de pestañas son la solución perfecta para conseguir una mirada intensa y seductora sin la necesidad de usar máscara de pestañas. Ofrecemos diferentes estilos, desde extensiones clásicas hasta volumen ruso, para que puedas elegir el look que mejor se adapte a ti. Las extensiones son ligeras, cómodas y realzan la belleza natural de tus ojos"},
@@ -40,7 +38,7 @@ let links = [
     main.appendChild(titulo);
   
     const descripcion = document.createElement("p");
-    descripcion.innerHTML = "Bienvenidos a Estética Integral, donde ofrecemos una amplia gama de servicios para cuidar tu belleza. <a href='servicios.html'>Ver nuestros servicios</a>";
+    descripcion.innerHTML = "Bienvenidos a Estética Integral, donde ofrecemos una amplia gama de servicios para cuidar tu belleza.";
     main.appendChild(descripcion);
     let  contenedorTarjetas = document.createElement("div");
     contenedorTarjetas.classList.add("contenedor-tarjetas3");
