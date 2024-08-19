@@ -1,0 +1,15 @@
+[
+    {
+        "nombre": "Inicio",
+        "linkTexto": "../index.html"
+    },
+    {
+        "nombre": "Servicios",
+        "linkTexto": "servicios.html"
+    },
+    {
+        "nombre": "Contactos",
+        "linkTexto": "contactos.html"
+    }
+]
+

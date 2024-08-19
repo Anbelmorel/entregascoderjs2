@@ -1,0 +1,6 @@
+[
+    {"paso": 1 , "clase":"pasos" ,"id": "paso-1", "img": "../imag/iconoPasosPest.png"},
+    {"paso": 2, "clase":"pasos" ,"id": "paso-2", "img": "../imag/calendario.png"},
+    {"paso": 3, "clase":"pasos" ,"id": "paso-3", "img": "../imag/mano.png"},
+    {"paso": 4, "clase":"pasos" ,"id": "paso-4", "img": "../imag/factura.png"}
+]

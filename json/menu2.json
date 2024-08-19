@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "Inicio",
+        "link": "index.html"
+    },
+    {
+        "nombre": "servicos",
+        "link": "pages/servicios.html"
+    },
+    {
+        "nombre": "contactos",
+        "link": "pages/contactos.html"
+    }
+]

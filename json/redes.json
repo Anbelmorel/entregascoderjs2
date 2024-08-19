@@ -1,0 +1,5 @@
+[
+    { "nombre": "Instagram"," imagenF": "imag/instagram.png" },
+    { "nombre": "Facebook", "imagenF": "imag/facebook.png" },
+    { "nombre": "WhatsApp", "imagenF": "imag/whatsapp.png" }
+ ]
