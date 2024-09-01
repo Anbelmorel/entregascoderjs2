@@ -6,7 +6,7 @@ const footer = document.querySelector("footer");
 // Menú
 let links = [
   { nombre: "Inicio", linkTexto: "index.html" },
-  { nombre: "servicios", linkTexto: "pages/servicios.html" }
+  { nombre: "Servicios", linkTexto: "pages/servicios.html" }
 ];
 let menu = crearMenu(links);
 function crearMenu(links) {

@@ -1,3 +1,5 @@
+
+
 let header = document.querySelector("header");
 let main = document.querySelector("main");
 let footer = document.querySelector("footer");
@@ -54,11 +56,11 @@ let servifacial = `[
 ]`;
 
 let servidepi = `[
-  { "nombre": "axila pierna entera", "precio": 5000, "categoria": "promos" },
-  { "nombre": "bozo + axila", "precio": 5000, "categoria": "promos" },
-  { "nombre": "cuerpo entero", "precio": 10000 },
-  { "nombre": "pierna entera + cavado", "precio": 7000, "categoria": "promo" },
-  { "nombre": "rostro", "precio": 3500 }
+  {"nombre": "axila pierna entera", "precio": 5000, "categoria": "promos" },
+  {"nombre": "bozo + axila", "precio": 5000, "categoria": "promos" },
+  {"nombre": "cuerpo entero", "precio": 10000 },
+  {"nombre": "pierna entera + cavado", "precio": 7000, "categoria": "promo" },
+  {"nombre": "rostro", "precio": 3500 }
 ]`;
 
 let datosunas = JSON.parse(serviunas);
@@ -77,6 +79,7 @@ function crearTarjetas(servicios, contenedor, turnosDisponibles) {
   servicios.forEach((servicio) => {
     let tarjeta = document.createElement("div");
     tarjeta.classList.add("tarjeta2");
+    tarjeta.id = servicio.nombre;
     if (servicio.img) {
       let imagen = document.createElement("img");
       imagen.src = servicio.img;
@@ -97,54 +100,80 @@ function crearTarjetas(servicios, contenedor, turnosDisponibles) {
     let boton = document.createElement("button");
     boton.textContent = "reservar";
     boton.addEventListener("click", ()=> {
-      console.log("aca estoy")
-      turnero.style.display = "block";
+      turnero.style.display ="block"
       mostrarTurnero(servicio , turnero , turnosDisponibles)
       
     });
-    tarjeta.appendChild(boton);
-    contenedor.appendChild(tarjeta);
+    tarjeta.appendChild(boton)
+    contenedor.appendChild(tarjeta)
+    
     let turnero = document.createElement("div");
+
     turnero.classList.add("turnos");
     tarjeta.appendChild(turnero);
     
   });
 }
+let depijson= `[
+{"fecha": "seleccionar" , "hora": "fecha y hora"},
+{"fecha": "4/09" , "hora": "08:00hs"},
+{"fecha": "11/09" , "hora": "11:00hs"},    
+{"fecha": "18/09" , "hora": "10:00hs"},
+{"fecha": "25/09" , "hora": "09:00hs"},
+{"fecha": "6/09" , "hora": "16:00hs"},
+{"fecha": "13/09" , "hora": "15:00hs"},
+{"fecha": "20/09" , "hora": "17:00hs"},
+{"fecha": "27/09" , "hora": "18:00hs"},
+{"fecha": "21/09" , "hora": "19:00hs"},
+{"fecha": "28/09" , "hora": "15:00hs"}  
+]`
+let manicjson = `[
+{"fecha": "seleccionar" , "hora": "fecha y hora"},
+{"fecha" : "02/09" , "hora" : "16:00hs"} ,
+{"fecha" : "09/09" , "hora" : "17:00hs"},
+{"fecha" : "16/09" , "hora" : "12:00hs"},
+{"fecha" : "23/09" , "hora" : "15:00hs"},
+{"fecha" : "30/09" , "hora" : "19:00hs"},
+{"fecha" : "04/09" , "hora" : "17:00hs"},
+{"fecha" : "11/09" , "hora" : "16:00hs"},
+{"fecha" : "18/09" , "hora" : "19 :00hs"},
+{"fecha" : "25/09" , "hora" : "20 :00hs"},
+{"fecha" : "2/10" , "hora" : "9:00hs"}
+]`
+let pestjson = `[
+{"fecha": "seleccionar" , "hora": "fecha y hora"},
+{"fecha":"03/09", "hora": "16:00hs"},
+{"fecha":"10/09", "hora": "17:00hs"},
+{"fecha":"17/09", "hora": "18:00hs"},
+{"fecha":"24/09", "hora": "19:00hs"},
+{"fecha":"6/09", "hora": "11:00hs"},    
+{"fecha":"13/09", "hora": "16:00hs"},    
+{"fecha":"20/09", "hora": "19:00hs"},
+{"fecha":"27/09", "hora": "16:00hs"}
+]`
+let facialjson = `[
+{"fecha": "seleccionar" , "hora": "fecha y hora"},
+{"fecha": " 02/09" , "hora": "09:00hs"},
+{"fecha": "10 /09" , "hora": "10:00hs"},
+{"fecha": " 13/09" , "hora": "11:00hs"},
+{"fecha": " 14/09" , "hora": "13:00hs"},
+{"fecha": " 16/09" , "hora": "16:00hs"},
+{"fecha": " 17/09" , "hora": "17:00hs"},
+{"fecha": " 18/09" , "hora": "18:00hs"},
+{"fecha": " 21/09" , "hora": "19:00hs"},
+{"fecha": " 28/09" , "hora": "16:00hs"},
+{"fecha": " 27/09" , "hora": "08:00hs"},    
+{"fecha": " 26/09" , "hora": "10:00hs"},
+{"fecha": " 25/09" , "hora": "16:00hs"},    
+{"fecha": " 30/09" , "hora": "19:00hs"}   
+]`
 
-/**/ 
-let turnosmani = [
-  {dia : "martes 20/08", hora: "9:00 hs"},
-  {dia : "martes 27/08", hora: "9:00 hs"},
-  {dia : "jueves 22/08", hora: "19:00 hs"},
-  {dia : "jueves 29/08", hora: "16:00 hs"},
-  {dia : "martes 27/08", hora: "12:00 hs"}
-]
-let turnopest = [
-  {dia: "lunes 19/08", hora: "16:00 hs"},
-  {dia: "lunes 19/08", hora: "19:00 hs"},
-  {dia: "miercoles 21/08", hora: "15:00hs"},
-  {dia: "miercoles 21/08", hora: "10:00 hs"},
-  {dia: "lunes 26/08", hora: "10:00hs"},
-  {dia: "miercoles 27/08", hora: "15:00hs"}
-]
-let turnodepi = [
-  {dia: "lunes 19/08", hora: "13:00 hs"},
-  {dia: "miercoles 21/08", hora: "16:00 hs"},
-  {dia: "jueves 22/08", hora: "19:00 hs"},
-  {dia: "viernes 23/08", hora: "15:00 hs"},
-  {dia: "sabado 24/08", hora: "8:00 hs"},
-  {dia: "martes 27/08", hora: "18:00 hs"}
-]
-let turnofacial = [
-  {dia: "viernes 23/08", hora: "16:00 hs"},
-  {dia: "martes 27/08", hora: "15:00 hs"},
-  {dia: "jueves 29/08", hora: "12:00 hs"},
-  {dia: "martes 27/08", hora: "10:00 hs"},
-  {dia: "viernes 30/08", hora: "19:00 hs"},
-  {dia: "viernes 23/08", hora: "16:00 hs"}
-]
+let turnodepi =   JSON.parse(depijson) 
+let turnofacial=  JSON.parse(facialjson)
+let turnomanic= JSON.parse(manicjson)
+let turnopest = JSON.parse(pestjson)
 
-
+/*turnero */ 
 function mostrarTurnero(servicio, turnero, turnosDisponibles) {
   if (turnosDisponibles && Array.isArray(turnosDisponibles)) {
     let texto = document.createElement("p");
@@ -156,7 +185,7 @@ function mostrarTurnero(servicio, turnero, turnosDisponibles) {
 
     turnosDisponibles.forEach((turno) => {
       let opcion = document.createElement("option");
-      opcion.textContent = `${turno.dia} ${turno.hora}`;
+      opcion.textContent = `${turno.fecha} ${turno.hora}`;
       select.appendChild(opcion);
     });
 
@@ -168,64 +197,87 @@ function mostrarTurnero(servicio, turnero, turnosDisponibles) {
     turnero.appendChild(contenedorTurnoSeleccionado);
 
     botonConfirmar.addEventListener("click", function() {
+      turnero.style.display ="none"
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        iconColor: '#5ff4ab',
+        background: '#ffe0ff',
+        title: "El servicio se agrego al carrito",
+        showConfirmButton: false,
+        timer: 1500
+      });
+
+        
       let turnoSeleccionado = select.value;
 
       let servicioSeleccionado = {
         nombre: servicio.nombre, 
         precio: servicio.precio,
-        turno: turnoSeleccionado
+        turno: turnoSeleccionado,
+        imagen : servicio.img
       };
 
-      let serviciosSeleccionados = JSON.parse(sessionStorage.getItem('serviciosSeleccionados')) || [];
+      let serviciosSeleccionados = JSON.parse(localStorage.getItem('serviciosSeleccionados')) || [];
       serviciosSeleccionados.push(servicioSeleccionado);
-      sessionStorage.setItem('serviciosSeleccionados', JSON.stringify(serviciosSeleccionados));
+      localStorage.setItem('serviciosSeleccionados', JSON.stringify(serviciosSeleccionados));
 
       contenedorTurnoSeleccionado.textContent = `Servicio: ${servicio.nombre} | Turno: ${turnoSeleccionado}`;
+
 
       mostrarCarrito();
     });
 
     turnero.appendChild(botonConfirmar);
-    contenedor.appendChild(turnero); 
-  } else {
-    console.log("turnosDisponibles es undefined o no es un array");
-  }
+  } 
   return turnero;
 }
+/* carrito boton  */
+let botoncarrito = document.getElementsByClassName("boton-carrito")[0];
+botoncarrito.addEventListener("click", function () {
+    carritoContenedor.style.display = "block"
+    carritoContenedor.style.height = "100%"
+    carritoContenedor.style.width = "400px"
+    carritoContenedor.style.position = "absolute"
+    carritoContenedor.style.top = "2.5px"
+    carritoContenedor.style.right = "-20px"
+});
+
+let carritoContenedor = document.querySelector('.contenedor-carrito');
+
+let cerrarCarrito = document.querySelector('.cerrar');
+cerrarCarrito.addEventListener("click", function (){
+  carritoContenedor.style.display = "none"
+});
+
+
+
+
 
 function mostrarCarrito() {
-  let carritoContenedor = document.querySelector('.contenedor-carrito');
+  carritoContenedor.innerHTML = '';
   
-
-  let carrito = document.createElement("div");
-  carrito.classList.add("carrito");
-
-  let titulo = document.createElement("h2");
-  titulo.textContent = "Carrito de Compras";
-  carrito.appendChild(titulo);
-
-  
-  let serviciosSeleccionados = JSON.parse(sessionStorage.getItem('serviciosSeleccionados')) || [];
+  let serviciosSeleccionados = JSON.parse(localStorage.getItem('serviciosSeleccionados')) || [];
 
   let total = 0;
 
   serviciosSeleccionados.forEach(servicio => {
     let item = document.createElement("p");
-    item.textContent = `Servicio: ${servicio.nombre} | Turno: ${servicio.turno} | Precio: $${servicio.precio}`;
-    carrito.appendChild(item);
+    item.innerHTML = `Servicio: ${servicio.nombre} <br> Turno: ${servicio.turno} <br> Precio: $${servicio.precio}`;
+    carritoContenedor.appendChild(item);
     total += parseInt(servicio.precio); 
   });
 
 
   let totalElement = document.createElement("p");
   totalElement.textContent = `Total: $${total}`;
-  carrito.appendChild(totalElement);
+  carritoContenedor.appendChild(totalElement);
 
  
-  let metodoPago = sessionStorage.getItem('metodoPago') || "No seleccionado";
+  let metodoPago = localStorage.getItem('metodoPago') || "No seleccionado";
   let pago = document.createElement("p");
   pago.textContent = `Método de Pago: ${metodoPago}`;
-  carrito.appendChild(pago);
+  carritoContenedor.appendChild(pago);
 
   
   let metodoPagoContenedor = document.createElement("div");
@@ -248,46 +300,54 @@ function mostrarCarrito() {
     metodoPagoContenedor.appendChild(label);
   });
 
-  carrito.appendChild(metodoPagoContenedor);
+  carritoContenedor.appendChild(metodoPagoContenedor);
 
   
   let botonConfirmar = document.createElement("button");
   botonConfirmar.textContent = "Confirmar Compra";
   botonConfirmar.classList.add("boton-confirmar")
   botonConfirmar.addEventListener("click", function() {
-    
+    carritoContenedor.style.display ="none"
+    Swal.fire({
+      title: 'compra finalizada',
+      icon: "success",
+      confirmButtonText: 'Aceptar'
+    });
+
     let metodoPagoSeleccionado = document.querySelector('input[name="metodoPago"]:checked');
     if (metodoPagoSeleccionado) {
-      sessionStorage.setItem('metodoPago', metodoPagoSeleccionado.value);
+      localStorage.setItem('metodoPago', metodoPagoSeleccionado.value);
     } else {
-      sessionStorage.setItem('metodoPago', "No seleccionado");
-    }
-
+      localStorage.setItem('metodoPago', "No seleccionado");
+    }  
     confirmarCompra();
   });
-  carrito.appendChild(botonConfirmar);
+  carritoContenedor.appendChild(botonConfirmar);
 
-  carritoContenedor.appendChild(carrito);
+ 
 }
 
 function confirmarCompra() {
-  alert("Compra confirmada. Gracias por su compra.");
-
-  
-  sessionStorage.removeItem('serviciosSeleccionados');
-  sessionStorage.removeItem('metodoPago');
-
-  
+  localStorage.removeItem('serviciosSeleccionados');
+  localStorage.removeItem('metodoPago');
   let carritoContenedor = document.querySelector('.contenedor-carrito');
-  carritoContenedor.innerHTML = "";
+  if (carritoContenedor) {
+    carritoContenedor.innerText = "";
+  } else {
+    console.error("No se encontró el elemento contenedor-carrito");
+  }
 }
 
 
-crearTarjetas(datosunas, contmani, turnosmani);
+
+
+
+
+
+crearTarjetas(datosunas, contmani, turnomanic);
 crearTarjetas(datospest, contpest, turnopest);
 crearTarjetas(datosdepi, contdepi, turnodepi);
-crearTarjetas(datosfacial, contfacial, turnofacial);
-
+crearTarjetas(datosfacial, contfacial,turnofacial);
 
 
   //footer 
@@ -321,3 +381,4 @@ crearTarjetas(datosfacial, contfacial, turnofacial);
   footer.appendChild(derechos);
 
 
+  
